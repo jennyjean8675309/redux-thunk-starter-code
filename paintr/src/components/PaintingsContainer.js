@@ -33,4 +33,7 @@ class PaintingsContainer extends React.Component {
   }
 }
 
+
+
+// connect takes two args - the first is mapStateToProps, the second is mapDispatchToProps
 export default PaintingsContainer;

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import paintingsData from "../paintings.json";
+// import paintingsData from "../paintings.json";
 
 const searchTextReducer = (state = "", action) => {
   switch (action.type) {
@@ -10,8 +10,10 @@ const searchTextReducer = (state = "", action) => {
   }
 };
 
-const paintingsReducer = (state = paintingsData.paintings, action) => {
+const paintingsReducer = (state = [], action) => {
   switch (action.type) {
+    case "FETCH_PAINTINGS":
+      return action.payload
     case "INCREASE_VOTES":
       return state.map(painting => {
         if (painting.id === action.payload) {

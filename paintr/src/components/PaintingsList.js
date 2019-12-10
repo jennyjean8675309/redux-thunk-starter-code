@@ -8,7 +8,6 @@ const PaintingsList = props => (
       {props.paintings.map(painting => (
         <PaintingListItem
           key={painting.id}
-          selectPainting={props.selectPainting}
           painting={painting}
         />
       ))}
